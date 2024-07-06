@@ -5,14 +5,14 @@ A SwiftUI app for tvOS to allow you to go deeper into the Marvel Universe.
 Discover New Characters and Comics to find your next read from your TV
 
 ## To Run
-1) Marvel Developer API keys are required to run this sample code
+1) Marvel Developer API keys are required to run this sample code (https://developer.marvel.com/)
 2) Insert both your Public and Private Keys in the APIInformation.swift file (variables publicKey/privateKey)
 
 ## Implementation Details
-- All code written using Swift / SwiftUI / Combine
-- View Models using Combine and Services (MavelDataFetching) is using async/await to run the urlRequests
+- Code written using Swift / SwiftUI / Combine
+- View Models using Combine and Small Service Layer (MarvelDataFetching) is using async/await to run the urlRequests and publishing data
 - There are Previews enabled using Mock Services (json from bundle).  This helps iteration on the SwiftUI pieces
-- Injectable API layer and scheduler parameter to allow unit tests to inject whatever data they need with a mock and have view models immediately react
+- Injectable API layer and scheduler parameter allow unit tests to executed on view models
 
 ## Optimize this for a real app
 - Paging of the API responses.   The current services will only provide the first 20 values and I'm okay with that for initial iteration.
