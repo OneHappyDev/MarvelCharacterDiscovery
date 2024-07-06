@@ -28,7 +28,6 @@
 		063082672C385B410019A29D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063082662C385B410019A29D /* CharacterListViewModel.swift */; };
 		0630826F2C385C0B0019A29D /* MarvelDataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0630826E2C385C0B0019A29D /* MarvelDataFetching.swift */; };
 		063082712C385D5F0019A29D /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 063082702C385D5F0019A29D /* characters.json */; };
-		063082752C385E9B0019A29D /* README in Resources */ = {isa = PBXBuildFile; fileRef = 063082742C385E9B0019A29D /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		063082662C385B410019A29D /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		0630826E2C385C0B0019A29D /* MarvelDataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataFetching.swift; sourceTree = "<group>"; };
 		063082702C385D5F0019A29D /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
-		063082742C385E9B0019A29D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +124,6 @@
 		0630822F2C3858840019A29D /* MarvelDiscovery */ = {
 			isa = PBXGroup;
 			children = (
-				063082742C385E9B0019A29D /* README */,
 				06226DF22C389563001B4965 /* APIInformation.swift */,
 				063082302C3858840019A29D /* MarvelDiscoveryApp.swift */,
 				06226DE72C387329001B4965 /* Info.plist */,
@@ -279,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063082752C385E9B0019A29D /* README in Resources */,
 				063082712C385D5F0019A29D /* characters.json in Resources */,
 				063082382C3858850019A29D /* Preview Assets.xcassets in Resources */,
 				063082352C3858850019A29D /* Assets.xcassets in Resources */,
