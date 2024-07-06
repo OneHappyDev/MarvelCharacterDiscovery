@@ -12,11 +12,11 @@ import Combine
 class CharacterListViewModel: ObservableObject {
     @Published var isLoading = true
     @Published var hasData = false
-    @Published var characters: [CharacterFetchCharacterData] = []
+    @Published var characters: [Character] = []
     
     let characterFetchingService: MarvelDataFetching
     
-    init<SchedulerType: Scheduler>(isLoading: Bool = true, characters: [CharacterFetchCharacterData] = [], characterFetchingService: MarvelDataFetching, scheduler: SchedulerType = DispatchQueue.main) {
+    init<SchedulerType: Scheduler>(isLoading: Bool = true, characters: [Character] = [], characterFetchingService: MarvelDataFetching, scheduler: SchedulerType = DispatchQueue.main) {
         self.isLoading = isLoading
         self.characters = characters
         self.characterFetchingService = characterFetchingService

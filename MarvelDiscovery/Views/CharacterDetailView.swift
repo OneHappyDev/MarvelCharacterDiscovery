@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CharacterDetailView: View {
     
-    let character: CharacterFetchCharacterData
+    let character: Character
     @ObservedObject var viewModel: CharacterDetailViewModel
     
     var body: some View {
@@ -23,6 +23,8 @@ struct CharacterDetailView: View {
                         .edgesIgnoringSafeArea(.all)
                 } placeholder: {
                     Color.gray
+                        .mask(LinearGradient(gradient: Gradient(colors: [.black, .clear]), startPoint: .top, endPoint: .bottom))
+                        .mask(LinearGradient(gradient: Gradient(colors: [.black, .clear]), startPoint: .leading, endPoint: .trailing))
                         .edgesIgnoringSafeArea(.all)
                 }
                 Spacer()
@@ -55,5 +57,5 @@ struct CharacterDetailView: View {
 }
 
 #Preview {
-    CharacterDetailView(character: CharacterFetchCharacterData(id: 1, name: "3-D Man", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", pathType: "jpg")), viewModel: CharacterDetailViewModel(characterId: 1, characterFetchingService: MarvelDataFetchingMock()))
+    CharacterDetailView(character: Character(id: 1, name: "3-D Man", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", pathType: "jpg")), viewModel: CharacterDetailViewModel(characterId: 1, characterFetchingService: MarvelDataFetchingMock()))
 }

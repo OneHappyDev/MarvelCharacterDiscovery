@@ -13,7 +13,7 @@ enum MarvelDataFetchError: Error {
 }
 
 protocol MarvelDataFetching {
-    func loadCharaters() -> AnyPublisher<[CharacterFetchCharacterData], Error>
+    func loadCharaters() -> AnyPublisher<[Character], Error>
     func loadComics(for: Int) -> AnyPublisher<[Comic], Error>
 }
 
@@ -33,9 +33,9 @@ class MarvelDataFetchingImplementation: MarvelDataFetching {
             .eraseToAnyPublisher()
     }
     
-    func loadCharaters() -> AnyPublisher<[CharacterFetchCharacterData], any Error> {
+    func loadCharaters() -> AnyPublisher<[Character], any Error> {
         guard let url = APIInformation().characterURL() else {
-            return Fail<[CharacterFetchCharacterData], Error>(error: MarvelDataFetchError.FailureToLoad)
+            return Fail<[Character], Error>(error: MarvelDataFetchError.FailureToLoad)
                 .eraseToAnyPublisher()
         }
         

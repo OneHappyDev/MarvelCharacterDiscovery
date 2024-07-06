@@ -17,10 +17,10 @@ struct CharacterResults: Decodable {
     let limit: Int
     let total: Int
     let count: Int
-    let results: [CharacterFetchCharacterData]
+    let results: [Character]
 }
 
-struct CharacterFetchCharacterData: Decodable, Identifiable {
+struct Character: Decodable, Identifiable {
     let id: Int
     let name: String
     let thumbnail: Thumbnail

@@ -16,7 +16,7 @@ final class CharacterListViewModelTests: XCTestCase {
         let viewModel = CharacterListViewModel(characterFetchingService: mockFetch, scheduler: ImmediateScheduler.shared)
         XCTAssert(viewModel.isLoading == true)
         
-        mockFetch.emitCharacters(characters: [CharacterFetchCharacterData(id: 1, name: "Test", thumbnail: Thumbnail(path: "", pathType: ""))])
+        mockFetch.emitCharacters(characters: [Character(id: 1, name: "Test", thumbnail: Thumbnail(path: "", pathType: ""))])
         XCTAssert(viewModel.isLoading == false)
         XCTAssert(viewModel.characters.first?.name == "Test")
     }

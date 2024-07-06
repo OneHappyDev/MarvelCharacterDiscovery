@@ -27,10 +27,10 @@ class MarvelDataFetchingMock: MarvelDataFetching {
             .eraseToAnyPublisher()
     }
     
-    func loadCharaters() -> AnyPublisher<[CharacterFetchCharacterData], any Error> {
+    func loadCharaters() -> AnyPublisher<[Character], any Error> {
         
         guard let url = Bundle.main.url(forResource: "characters", withExtension: "json") else {
-            return Fail<[CharacterFetchCharacterData], Error>(error: MarvelDataFetchError.FailureToLoad)
+            return Fail<[Character], Error>(error: MarvelDataFetchError.FailureToLoad)
                 .eraseToAnyPublisher()
         }
   

@@ -12,10 +12,10 @@ import Combine
 // Mock Service so Unit Tests can emit values as desired to validate view model loading appropriately
 class MarvelDataFetchingTestingMock: MarvelDataFetching {
 
-    private var characterSubject = PassthroughSubject<[CharacterFetchCharacterData], any Error>()
+    private var characterSubject = PassthroughSubject<[Character], any Error>()
     private var comicsSubject = PassthroughSubject<[Comic], any Error>()
     
-    func emitCharacters(characters: [CharacterFetchCharacterData]) {
+    func emitCharacters(characters: [Character]) {
         characterSubject.send(characters)
     }
     
@@ -23,7 +23,7 @@ class MarvelDataFetchingTestingMock: MarvelDataFetching {
         comicsSubject.send(comics)
     }
     
-    func loadCharaters() -> AnyPublisher<[CharacterFetchCharacterData], any Error> {
+    func loadCharaters() -> AnyPublisher<[Character], any Error> {
         return characterSubject
             .eraseToAnyPublisher()
     }

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CharacterPortraitView: View {
-    let character: CharacterFetchCharacterData
+    let character: Character
     
     var body: some View {
         VStack {
@@ -35,5 +35,5 @@ struct CharacterPortraitView: View {
 }
 
 #Preview {
-    CharacterPortraitView(character: CharacterFetchCharacterData(id: 1, name: "Test", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", pathType: "jpg")))
+    CharacterPortraitView(character: Character(id: 1, name: "Test", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", pathType: "jpg")))
 }
